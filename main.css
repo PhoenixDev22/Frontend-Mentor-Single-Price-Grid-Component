@@ -34,7 +34,7 @@ body{
     font-weight: 700;
 }
 main{
-    max-width: 800px;
+    max-width: 670px;
     width: 76%;
     display: grid;
     grid-template-columns: repeat(2, minmax(300px , 1fr));
