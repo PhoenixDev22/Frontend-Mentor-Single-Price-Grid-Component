@@ -1,0 +1,175 @@
+*, 
+*::before,
+*::after{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    /* Primary */
+    --Cyan: hsl(179, 62%, 43%);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+    /*Neutral */
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+ul{
+    list-style: none;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--Light-Gray);
+}
+.description{
+    line-height: 1.8;
+    font-size: 16px;
+}
+.sub-heading{
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 700;
+}
+main{
+    max-width: 800px;
+    width: 76%;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(300px , 1fr));
+    grid-template-rows: auto auto;
+    margin: 50px 60px;
+    font-size: 16px;
+    font-family: 'Karla', sans-serif;
+    color: #fff;
+    border-radius: 15px;
+    box-shadow: 0px 8px 24px rgb(52 64 74 / 30%);
+    overflow: hidden;
+}
+main > div{
+    padding: 30px;
+}
+/* --------------Community Div Styling --------*/
+.community{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background-color: #fff;
+}
+.community h1{
+    margin-bottom: 25px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--Cyan);
+}
+.community .sub-heading{
+    color: var(--Bright-Yellow);
+}
+.community p{
+    color: var(--Grayish-Blue);
+}
+/*-------------------- Subscription Div Styling ----------- */
+.subscription{
+    grid-column: 1/2;
+    grid-row:2/3;
+    background: var(--Cyan);
+}
+.subscription .cost {
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 15px;;
+}
+.subscription .cost .price{
+    font-size: 40px;
+    margin-right: 10px;
+    font-weight: 700;
+}
+.subscription .cost span{
+    font-size: 16px;
+    color: var(--Light-Gray);
+    font-weight: 400;
+}
+.subscription a{
+    display: block;
+    border: none;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px 0;
+    margin-top:25px;
+    width: 100%;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--Bright-Yellow);
+    -moz-box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    -webkit-box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    box-shadow: 0px 8px 24px rgba(149, 157, 165, 0.2);
+    opacity: .9;
+    transition: all .3s ease;
+}
+.subscription a:hover{
+    opacity: 1;
+    box-shadow: 0px 8px 24px rgb(52 64 74 / 30%);
+}
+/* ---------------- Why Us Div Styling  ---------------*/
+.why-us{
+    grid-column: 2/3;
+    grid-row:2/3;
+    background-color: hsl(179deg 62% 43% / 72%);
+}
+.why-us ul li {
+    margin: 5px 0;
+    font-size: 16px;
+}
+/* ------- media query for screens less then 780px  -----------*/
+@media screen and (max-width: 780px){
+    .sub-heading {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .description{
+        line-height: 1.4;
+        font-size: 13px;
+    }
+    main{
+        max-width: 500px;
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    main>div{
+        width: 100%;
+        height: fit-content;
+        padding: 25px;
+    }
+    .community h1{
+        margin-bottom: 20px;
+        font-size: 22px; 
+    } 
+    .community .description{
+        line-height: 1.7;
+    }
+    .subscription .cost .price{
+        font-size: 30px;
+    }
+    .subscription .cost .price+span{
+        font-size: 13px;
+    }
+    .why-us ul li {
+        font-size: 13px;
+    }
+}
+.attribution { 
+    font-size: 13px; 
+    text-align: center; 
+    font-weight: 500;
+    font-family: 'Karla', sans-serif;
+    margin-bottom: 30px;
+}
+.attribution a { 
+    color: var(--Cyan); 
+}
